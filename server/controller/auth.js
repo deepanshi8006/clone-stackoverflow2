@@ -130,11 +130,11 @@ export const paymentVerfication = async (req, res) => {
           JSON.stringify({ _id, name, email, tags, joinedOn })
         );
         res.redirect(
-          `https://darling-kelpie-39d5c8.netlify.app`
+          `https://magenta-kringle-04f73c.netlify.app`
         );
       } else {
         return res.redirect(
-          `https://darling-kelpie-39d5c8.netlify.app`
+          `https://magenta-kringle-04f73c.netlify.app`
         );
       }
     } catch (err) {
