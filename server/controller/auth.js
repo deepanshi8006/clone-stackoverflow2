@@ -130,14 +130,14 @@ export const paymentVerfication = async (req, res) => {
           JSON.stringify({ _id, name, email, tags, joinedOn })
         );
         res.redirect(
-          `https://exquisite-dragon-c74f14.netlify.app/subscription/success?reference=${recieptData}&user=${userData}`
+          `https://stackoverflow20.netlify.app/subscription/success?reference=${recieptData}&user=${userData}`
           // `http://localhost:3000/subscription/success?reference=${recieptData}&user=${userData}`
 
         );
     
       } else {
         return res.redirect(
-          `https://exquisite-dragon-c74f14.netlify.app/subscription/cancel?reference=${razorpay_payment_id}`
+          `https://stackoverflow20.netlify.app/subscription/cancel?reference=${razorpay_payment_id}`
           // `http://localhost:3000/subscription/cancel?reference=${razorpay_payment_id}`
         );
         
