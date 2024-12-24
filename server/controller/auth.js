@@ -130,12 +130,17 @@ export const paymentVerfication = async (req, res) => {
           JSON.stringify({ _id, name, email, tags, joinedOn })
         );
         res.redirect(
-          `https://magenta-kringle-04f73c.netlify.app`
+          `https://magenta-kringle-04f73c.netlify.app/subscription/success?reference=${recieptData}&user=${userData}`
+          // `http://localhost:3000/subscription/success?reference=${recieptData}&user=${userData}`
+
         );
+    
       } else {
         return res.redirect(
-          `https://magenta-kringle-04f73c.netlify.app`
+          `https://magenta-kringle-04f73c.netlify.app/subscription/cancel?reference=${razorpay_payment_id}`
+          // `http://localhost:3000/subscription/cancel?reference=${razorpay_payment_id}`
         );
+        
       }
     } catch (err) {
       console.log(err);
